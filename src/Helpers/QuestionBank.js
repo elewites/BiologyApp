@@ -7,8 +7,8 @@ export const Questions = [
       " gene expression is most likely to be modulated.",
     optionA: "Lag Phase, Exponential Phase, Stationary Phase",
     optionB: "G1 Phase, DNA Synthesis, Meiosis",
-    optionC: "Transcriptional, Ribosomal, Post-Ribosomal",
-    optionD: "Transcriptional, Translational, Post-Translational",
+    optionC: "Transcriptional level, Ribosomal level, Post-Ribosomal level",
+    optionD: "Transcriptional level, Translational level, Post-Translational level",
     answer: "D",
   },
   {
@@ -47,9 +47,9 @@ export const Questions = [
   {
     prompt:
       "The following question tests your understanding on the levels of" +
-      " expression using the mal operon as an example." +
+      " expression using the mal operon as an example. True or false:" +
       " In the presence of regulatory protein MalT and the" +
-      " sugar molecule maltose, that the mal operon will produce" +
+      " sugar molecule maltose, the mal operon will produce" +
       " basal levels of the MalP and MalQ protein. ",
     optionA: "True",
     optionB: "False",
@@ -75,7 +75,7 @@ export const Questions = [
       "Given your understanding of polycistronic mRNA and operons," +
       " determine if the following statement is true or false: " +
       " In a bacteria cell, an operon containing multiple coding" +
-      " regions also has multiple +1 sites, one for transcribed" +
+      " regions also has multiple +1 sites, one for each transcribed" +
       " region of a gene",
     optionA: "True",
     optionB: "False",
@@ -119,7 +119,7 @@ export const Questions = [
       "Given what you know about operons and operon mutations," +
       " determine if the following statement is true or false: " +
       " If there is a mutation in the operator region of the mal operon," +
-      " in the presence of maltose, the level of transcription" +
+      " in the presence of maltose; the level of transcription" +
       " of malPQ will be high. ",
     optionA: "True",
     optionB: "False",
