@@ -1,3 +1,4 @@
+//represents a question bank
 export const Questions = [
   {
     prompt:

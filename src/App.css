@@ -2,6 +2,7 @@ body {
   margin: 0;
 }
 
+/*App level css*/
 .App {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -10,6 +11,8 @@ body {
   flex-direction: column;
 }
 
+
+/*Menu, Quiz, Endscreen css*/
 .Menu,
 .EndScreen {
   width: 400px;
@@ -20,6 +23,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .Quiz {
@@ -32,14 +36,11 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-}
-
-.Menu,
-.Quiz,
-.EndScreen {
   color: white;
 }
 
+
+/*Button across Menu, Quiz, Endscreen*/
 .Menu button,
 .Quiz button,
 .EndScreen button {
@@ -56,6 +57,9 @@ button:hover {
   background-color: rgb(183, 186, 187);
 }
 
+
+
+/*Quiz component only css*/
 .options button:hover {
   background-color: rgb(183, 186, 187);
 }

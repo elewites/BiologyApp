@@ -1,13 +1,18 @@
 import React, { useState, useContext } from "react";
+
+//question bank
 import { Questions } from "../Helpers/QuestionBank";
+
+//context
 import { QuizContext } from "../Helpers/Contexts";
 
 export default function Quiz() {
+  //global states
   const { score, setScore, setGameState } = useContext(QuizContext);
+
+  //Quiz component states
   const [currQuestion, setCurrQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
-
-  const [trueOrFalse, setTrueOrFalse] = useState(false);
 
   const nextQuestion = () => {
     if (Questions[currQuestion].answer == optionChosen) {
