@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.navbar button:hover {
+  background-color: lightseagreen;
+  color: white;
+}
+
+.name {
+  margin-right: 10px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}

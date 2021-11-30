@@ -15,14 +15,14 @@ export default function Quiz() {
   const [optionChosen, setOptionChosen] = useState("");
 
   const nextQuestion = () => {
-    if (Questions[currQuestion].answer == optionChosen) {
+    if (Questions[currQuestion].answer === optionChosen) {
       setScore(score + 1);
     }
     setCurrQuestion(currQuestion + 1);
   };
 
   const finishQuiz = () => {
-    if (Questions[currQuestion].answer == optionChosen) {
+    if (Questions[currQuestion].answer === optionChosen) {
       setScore(score + 1);
     }
     setGameState("endScreen");
@@ -54,7 +54,7 @@ export default function Quiz() {
         )}
       </div>
 
-      {currQuestion == Questions.length - 1 ? (
+      {currQuestion === Questions.length - 1 ? (
         <button onClick={finishQuiz}>Finish Quiz</button>
       ) : (
         <button onClick={nextQuestion}>Next Question</button>

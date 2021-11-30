@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import "../css/userform.css";
 import { QuizContext } from "../Helpers/Contexts";
+import { auth } from "../firebase-config";
 
 export default function UserForm(props) {
   const {
@@ -26,16 +28,12 @@ export default function UserForm(props) {
         <label for="username">Username</label>
         <input
           id="username"
-          onChange={(e) => setUsername(e.target.value)}
         ></input>
       </div>
       <div className="input">
         <label for="password">Password</label>
         <input
           id="password"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
         ></input>
       </div>
       <button onClick={moveToQuiz}>{props.loginSignUp}</button>

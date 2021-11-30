@@ -1,44 +1,41 @@
 import React, { useState } from "react";
 
-//Contexts
-import { QuizContext } from "./Helpers/Contexts";
-
 //Components
 import MainMenu from "./Components/MainMenu";
 import Quiz from "./Components/Quiz";
 import EndScreen from "./Components/EndScreen";
-import UserForm from "./Components/UserForm";
+import Register from "./Components/Register";
+import Login from "./Components/Login";
+import NavBar from "./Components/NavBar";
+
+//Contexts
+import { QuizContext } from "./Helpers/Contexts";
 
 //Styling
 import "./App.css";
+import "semantic-ui-css/semantic.min.css";
 
 function App() {
   //global states
-  const [gameState, setGameState] = useState("signup");
+  const [gameState, setGameState] = useState("menu");
   const [score, setScore] = useState(0);
-  const [haveAccount, setHaveAccount] = useState(false);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState(null);
 
   return (
     <div className="App">
-      <h1>Regulating Gene Expression</h1>
       <QuizContext.Provider
         value={{
           gameState,
           setGameState,
           score,
           setScore,
-          haveAccount,
-          setHaveAccount,
-          username,
-          setUsername,
-          password,
-          setPassword,
+          user,
+          setUser,
         }}
       >
-        {gameState === "signup" && <UserForm loginSignUp="Sign Up" />}
-        {gameState === "login" && <UserForm loginSignUp="Login" />}
+        <NavBar />
+        {gameState === "signup" && <Register />}
+        {gameState === "login" && <Login />}
         {gameState === "menu" && <MainMenu />}
         {gameState === "quiz" && <Quiz />}
         {gameState === "endScreen" && <EndScreen />}
